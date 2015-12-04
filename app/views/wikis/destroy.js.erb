@@ -1,0 +1,6 @@
+<% if @wiki.destroyed? %>
+   $('#wiki-' +<%= @wiki.id %>).hide();
+   $('.flash').prepend("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>&times;</button>Wiki successfully deleted.</div>");
+ <% else %>
+   $('.flash').prepend("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button>Oops! Something went wrong...</div>");
+ <% end %>

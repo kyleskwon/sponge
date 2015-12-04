@@ -1,0 +1,13 @@
+  <br>
+<div class="col-md-3">
+  <h3><%= @wiki.title %></h3>
+</div>
+  <br>
+<div class="col-md-5">
+  <h4><%= @wiki.body %></h4>
+</div>
+  <br>
+<p class="text-left">
+  <%= link_to "Edit", edit_wiki_path %> |
+  <%= link_to "Back", welcome_index_path %>
+</p>

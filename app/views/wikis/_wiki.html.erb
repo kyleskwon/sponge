@@ -1,0 +1,11 @@
+<tr id="wiki-<%= wiki.id %>">
+  <td>
+    <%= link_to wiki.title, wiki %>
+  </td>
+  <td>
+    <%= link_to "Edit", edit_wiki_path(wiki) %>
+  </td>
+  <td>
+    <%= link_to "", wiki, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+  </td>
+</tr>
