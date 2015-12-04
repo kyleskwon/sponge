@@ -1,10 +1,13 @@
 <div class="container">
-  <%= form_for wiki do |f| %>
+  <%= form_for @wiki do |f| %>
       <%= f.label :title %>
       <%= f.text_field :title, class: 'form-control', placeholder: "Enter wiki title" %>
     <br>
       <%= f.label :body %>
       <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter wiki body" %>
+    <br>
+      <%= f.label :private %>
+      <%= f.check_box :private %>
     <br>
       <%= f.submit "Save", class: 'btn btn-success' %>
   <% end %>
