@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'wikis/new'
 
-  resources :users, except: [:destroy]
-  resources :wikis, except: [:destroy]
+  resources :users
+  resources :wikis
 
-  root 'welcome#index'
+  root to: 'welcome#index'
 end

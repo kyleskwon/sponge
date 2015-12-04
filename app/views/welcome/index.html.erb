@@ -1,2 +1,18 @@
-<h1>Sponge</h1>
-<p id="index-title">We soak up your information and hold onto it for dear life.</p>
+<h2>Sponge <small>We hold your wikis</small></h2>
+  <br>
+<p class="text-center">My Wikis</p>
+  <br>
+<table class="table">
+  <tr>
+    <th>Wiki</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <%= render current_user.wikis %>
+</table>
+  <br>
+<div class="container">
+  <p class="text-center">
+    <%= link_to "New Wiki", wikis_new_path %>
+  </p>
+</div>
