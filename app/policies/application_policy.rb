@@ -1,17 +1,10 @@
 class ApplicationPolicy
   attr_reader :user, :record
-  after_initialize :defaults
 
   def initialize(user, record)
     @user = user
     @record = record
   end
-
-  def defaults
-    self.role ||= :member
-  end
-
-  enum role: [:member, :premium, :admin]
 
   def index?
     false
