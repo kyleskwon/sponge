@@ -19,7 +19,12 @@ class ChargesController < ApplicationController
    current_user.premium!
 
    flash[:notice] = "Thank you #{current_user.email}! You are now a Premium Member!"
-   redirect_to user_path(current_user) # or wherever
+   redirect_to welcome_index_path(current_user) # or wherever
+
+   def downgrade
+     customer = Stripe::Customer.retrieve(current_user.customer_id)
+     current_user.update_attributes(role: 'member')
+   end
 
  # Stripe will send back CardErrors, with friendly messages
  # when something goes wrong.
@@ -40,6 +45,6 @@ end
 
 class Amount
   def self.default
-    10_00
+    15_00
   end
 end
