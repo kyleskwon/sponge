@@ -29,16 +29,16 @@ class WikisController < ApplicationController
   end
 
   def update
-     @wiki = Wiki.find(params[:id])
-     @wiki.title = params[:wiki][:title]
-     @wiki.body = params[:wiki][:body]
+     @wiki = current_user.wikis.find(params[:id])
+     @wiki.assign_attributes(wiki_params)
+     authorize(@wiki)
 
      if @wiki.save
        flash[:notice] = "Wiki was successfully saved."
        redirect_to welcome_index_path
      else
        flash[:error] = "There was an error saving the wiki. Please try again."
-       render :new
+       render :edit
      end
    end
 
@@ -63,3 +63,8 @@ class WikisController < ApplicationController
   end
 
 end
+
+# Wiki.find(params[:id])
+# @wiki.title = params[:wiki][:title]
+# @wiki.body = params[:wiki][:body]
+# @wiki.private = params[:wiki][:private]

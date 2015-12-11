@@ -1,4 +1,9 @@
 class WikiPolicy < ApplicationPolicy
+
+  def update?
+    user.present? && record.user == user
+  end
+  
   class Scope
      attr_reader :user, :scope
 

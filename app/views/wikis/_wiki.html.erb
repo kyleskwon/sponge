@@ -3,9 +3,13 @@
     <%= link_to wiki.title, wiki %>
   </td>
   <td>
-    <%= link_to "Edit", edit_wiki_path(wiki) %>
+    <% if policy(wiki).update? %>
+      <%= link_to "Edit", edit_wiki_path(wiki) %>
+    <% end %>
   </td>
   <td>
-    <%= link_to "", wiki, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+    <% if policy(wiki).update? %>
+      <%= link_to "", wiki, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+    <% end %>
   </td>
 </tr>

@@ -1,27 +1,29 @@
 <h2>Sponge <small>We hold the wikis</small></h2>
   <br>
-<p class="text-center">Public</p>
-  <br>
-<table class="table">
-  <tr>
-    <th>Title</th>
-    <th>Edit</th>
-    <th>Delete</th>
-  </tr>
-  <%= render @wikis %>
-</table>
-  <br>
-<p class="text-center">Private</p>
-  <br>
-<table class="table">
-  <tr>
-    <th>Title</th>
-    <th>Edit</th>
-    <th>Delete</th>
-  </tr>
-  <%= render current_user.wikis %>
-</table>
-  <br>
+  <% if current_user.admin? %>
+  <p class="text-center">All wikis</p>
+    <br>
+      <table class="table">
+        <tr>
+          <th>Title</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+          <%= render @wikis %>
+      </table>
+  <% end %>
+    <br>
+  <p class="text-center">My Wikis</p>
+    <br>
+      <table class="table">
+        <tr>
+          <th>Title</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+          <%= render current_user.wikis %>
+      </table>
+    <br>
   <p class="text-center">
     <%= link_to "New Wiki", new_wiki_path %>
   </p>

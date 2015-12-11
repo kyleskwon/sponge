@@ -36,10 +36,11 @@ class ChargesController < ApplicationController
      amount: Amount.default
     }
   end
-end
 
-def downgrade
-  current_user.member!
+  def downgrade
+    current_user.member!
+    redirect_to :back
+  end
 end
 
 class Amount
