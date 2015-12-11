@@ -7,6 +7,7 @@ source 'https://rubygems.org'
  gem 'figaro'
  gem 'pundit'
  gem 'faker'
+ gem 'stripe'
 
  group :production do
    gem 'pg'
