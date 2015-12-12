@@ -8,6 +8,8 @@
 </div>
   <br>
 <p class="text-left">
-  <%= link_to "Edit", edit_wiki_path %> |
-  <%= link_to "Back", welcome_index_path %>
+  <% if current_user %>
+    <%= link_to "Edit", edit_wiki_path %> |
+  <% end %>
+    <%= link_to "Back", welcome_index_path %>
 </p>

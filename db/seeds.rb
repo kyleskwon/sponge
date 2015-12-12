@@ -8,10 +8,10 @@ users = User.all
 
 10.times do
   Wiki.create!(
-    user: users.sample,
     title: Faker::Lorem.sentence,
     body: Faker::Lorem.paragraph,
-    private: false
+    private: false,
+    user_id: 11
   )
 end
 
