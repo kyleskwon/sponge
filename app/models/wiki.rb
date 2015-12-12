@@ -3,7 +3,7 @@ class Wiki < ActiveRecord::Base
 
   validates_presence_of :title, :body
 
-  default_scope { order('updated_at ASC') }
+  default_scope { order('updated_at DESC') }
 
   scope :publicly_available, -> {where(private: false)}
 end
