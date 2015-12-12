@@ -2,7 +2,6 @@ class WikisController < ApplicationController
 
   def index
     @wikis = Wiki.all
-    wikispublic = Wiki.where(private: "false")
   end
 
   def show
@@ -63,10 +62,4 @@ class WikisController < ApplicationController
   def wiki_params
     params.require(:wiki).permit(:title, :body, :private)
   end
-
 end
-
-# Wiki.find(params[:id])
-# @wiki.title = params[:wiki][:title]
-# @wiki.body = params[:wiki][:body]
-# @wiki.private = params[:wiki][:private]
