@@ -10,7 +10,7 @@ users = User.all
   Wiki.create!(
     title: Faker::Lorem.sentence,
     body: Faker::Lorem.paragraph,
-    private: "false",
+    private: false,
     user_id: 11
   )
 end

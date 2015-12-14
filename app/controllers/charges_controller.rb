@@ -39,7 +39,7 @@ class ChargesController < ApplicationController
 
   def downgrade
     current_user.member!
-#    current_user.wikis.private = "false"
+    current_user.wikis.update_all(private: false)
     flash[:notice] = "No problem, we're glad you're still a member!"
     redirect_to :back
   end
