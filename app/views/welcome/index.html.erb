@@ -1,7 +1,10 @@
 <h2>Sponge <small>We hold the wikis</small></h2>
-  <br>
-  <% if current_user.admin? %>
-  <p class="text-center">All wikis</p>
+    <br>
+  <p class="text-left" >
+    <%= link_to "New Wiki", new_wiki_path, class: 'btn btn-success' %>
+  </p>
+
+  <h2 class="text-center">Wikis Index</h2>
     <br>
       <table class="table">
         <tr>
@@ -11,19 +14,4 @@
         </tr>
           <%= render @wikis %>
       </table>
-  <% end %>
     <br>
-  <p class="text-center">My Wikis</p>
-    <br>
-      <table class="table">
-        <tr>
-          <th>Title</th>
-          <th>Edit</th>
-          <th>Delete</th>
-        </tr>
-          <%= render current_user.wikis %>
-      </table>
-    <br>
-  <p class="text-center">
-    <%= link_to "New Wiki", new_wiki_path %>
-  </p>

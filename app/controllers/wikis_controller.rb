@@ -14,7 +14,6 @@ class WikisController < ApplicationController
 
   def create
     @wiki = current_user.wikis.new(wiki_params)
-
      if @wiki.save
        flash[:notice] = "Wiki was successfully saved."
        redirect_to welcome_index_path
@@ -29,7 +28,7 @@ class WikisController < ApplicationController
   end
 
   def update
-     @wiki = current_user.wikis.find(params[:id])
+     @wiki = Wiki.find(params[:id])
      @wiki.assign_attributes(wiki_params)
      authorize(@wiki)
 
@@ -43,7 +42,8 @@ class WikisController < ApplicationController
    end
 
    def destroy
-     @wiki = current_user.wikis.find(params[:id])
+     @wiki = Wiki.find(params[:id])
+     authorize(@wiki)
      @wiki.destroy
 
      respond_to do |format|
@@ -61,10 +61,4 @@ class WikisController < ApplicationController
   def wiki_params
     params.require(:wiki).permit(:title, :body, :private)
   end
-
 end
-
-# Wiki.find(params[:id])
-# @wiki.title = params[:wiki][:title]
-# @wiki.body = params[:wiki][:body]
-# @wiki.private = params[:wiki][:private]
