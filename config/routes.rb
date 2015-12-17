@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :users
-  resources :wikis
+  resources :wikis do
+    resources :collaborators, only: [:index, :create, :destroy]
+  end
   resources :charges, only: [:new, :create]
 
   get 'charges/downgrade', as: :downgrade
