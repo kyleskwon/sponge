@@ -25,8 +25,10 @@ class CollaboratorsController < ApplicationController
     redirect_to wiki_collaborators_path(@wiki)
   end
 
-  private
+private
+
   def set_wiki
     @wiki = Wiki.find(params[:wiki_id])
   end
+
 end
