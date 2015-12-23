@@ -8,7 +8,7 @@
     <% end %>
   </td>
   <td>
-    <% if policy(wiki).update? %>
+    <% if policy(wiki).destroy? %>
       <%= link_to "", wiki, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
     <% end %>
   </td>
