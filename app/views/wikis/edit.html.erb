@@ -1,9 +1,11 @@
 <h3>Edit Wiki</h3>
-<br>
+    <br>
   <div class="row">
     <%= render "form" %>
   </div>
-<br>
+    <br>
+  <%= link_to "Manage Collaborators", wiki_collaborators_path(@wiki), class: "btn btn-info" %>
+    <br>
   <div class="text-left">
     <%= link_to "Cancel", welcome_index_path %>
   </div>
