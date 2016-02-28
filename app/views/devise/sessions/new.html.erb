@@ -7,16 +7,16 @@
   <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/main.css">
 </head>
 <body class="landing">
-  <h2>Log in</h2>
+  <h3>Log in</h3>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form">
-    <div class="form-group">
+    <div class="form-group half">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, class: 'form-control' %>
     </div>
 
-    <div class="form-group">
+    <div class="form-group half">
       <%= f.label :password %><br />
       <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
     </div>
@@ -35,23 +35,24 @@
   <br>
   <%= render "devise/shared/links" %>
   </form>
-
+<br>
   <section class="hero-content">
       <h1 class="hero-title">Time to soak it up!</h1>
   </section>
+<br>
   <section class="selling-points container clearfix"> <!-- selling points -->
        <div class="point column third">
-           <span class="ion-music-note"></span>
+           <!-- <span class="ion-music-note"></span> -->
            <h5 class="point-title">Create an account</h5>
            <p class="point-description">Email and password. Duh.</p>
        </div>
        <div class="point column third">
-           <span class="ion-radio-waves"></span>
+           <!-- <span class="ion-radio-waves"></span> -->
            <h5 class="point-title">Post your wikis</h5>
            <p class="point-description">Title and description are all you need.</p>
        </div>
        <div class="point column third">
-           <span class="ion-iphone"></span>
+           <!-- <span class="ion-iphone"></span> -->
            <h5 class="point-title">Add Collaborators</h5>
            <p class="point-description">Find out more about a premium account.</p>
       </div>

@@ -22,6 +22,8 @@ body {
      background-repeat: no-repeat;
      background-position: center center;
      background-size: cover;
+     background-color: yellow;
+     border-style: solid;
  }
 
  .hero-content .hero-title {
@@ -38,6 +40,10 @@ body {
      text-transform: uppercase;      /* transforms the text to be all uppercase lettering */
      letter-spacing: 0.5rem;         /* puts 0.5 root ems worth of space between each letter */
      text-shadow: 1px 1px 0px rgb(58,23,63); /* creates a shadow underneath the text for readability over the image */
+ }
+
+ .half {
+     width: 50%;
  }
 
 .navbar {
