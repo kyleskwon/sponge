@@ -46,5 +46,32 @@
    <%= yield %>
 </div>
 
+<div id="content"></div>
+
+<script type="text/jsx">
+  var KylesComponent = React.createClass({
+      doSomething: function() {
+        alert("The text displaying is: " + this.props.children);
+      },
+      render: function () {
+        return(
+          <div>
+            <h3>{this.props.user}</h3>
+            <a onClick={this.doSomething} href="#" >Click Me</a>
+          </div>
+        );
+      }
+  });
+
+  React.render(
+    <div>
+      <KylesComponent user="Kyle">This guy is awesome</KylesComponent>
+      <KylesComponent user="Tyler">This guy is alright</KylesComponent>
+    </div>,
+    document.getElementById('content')
+  );
+</script>
+<br>
+<br>
 </body>
 </html>
