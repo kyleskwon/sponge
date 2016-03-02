@@ -51,13 +51,13 @@
 <script type="text/jsx">
   var KylesComponent = React.createClass({
       doSomething: function() {
-        alert("The text displaying is: " + this.props.children);
+        alert("One way to describe him is... " + this.props.children);
       },
       render: function () {
         return(
           <div>
             <h3>{this.props.user}</h3>
-            <a onClick={this.doSomething} href="#" >Click Me</a>
+            <a onClick={this.doSomething} href="#" >Description</a>
           </div>
         );
       }
@@ -65,8 +65,8 @@
 
   React.render(
     <div>
-      <KylesComponent user="Kyle">This guy is awesome</KylesComponent>
-      <KylesComponent user="Tyler">This guy is alright</KylesComponent>
+      <KylesComponent user="Kyle">funny</KylesComponent>
+      <KylesComponent user="Tyler">artistic</KylesComponent>
     </div>,
     document.getElementById('content')
   );
