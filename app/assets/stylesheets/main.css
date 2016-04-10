@@ -22,7 +22,7 @@ body {
      background-repeat: no-repeat;
      background-position: center center;
      background-size: cover;
-     background-color: yellow;
+     background-color: green;
      border-style: solid;
  }
 
@@ -36,6 +36,7 @@ body {
      width: 100%;                    /* makes sure the title inhabits the full width of its container */
      text-align: center;             /* aligns text in the horizontal center of the element */
      font-size: 4rem;                /* specifies the size of the font in root em units */
+     color: white;
      font-weight: 300;               /* makes the font thinner or lighter weight */
      text-transform: uppercase;      /* transforms the text to be all uppercase lettering */
      letter-spacing: 0.5rem;         /* puts 0.5 root ems worth of space between each letter */

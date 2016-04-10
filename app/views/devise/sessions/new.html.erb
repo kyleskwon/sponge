@@ -7,6 +7,28 @@
   <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/main.css">
 </head>
 <body class="landing">
+  <section class="hero-content">
+      <h1 class="hero-title">We got the scoop</h1>
+  </section>
+<br>
+  <section class="selling-points container clearfix"> <!-- selling points -->
+       <div class="point column third">
+           <!-- <span class="ion-music-note"></span> -->
+           <h5 class="point-title">Create an account</h5>
+           <p class="point-description">Email and password. Duh.</p>
+       </div>
+       <div class="point column third">
+           <!-- <span class="ion-radio-waves"></span> -->
+           <h5 class="point-title">Post your wikis</h5>
+           <p class="point-description">Title and description are all you need.</p>
+       </div>
+       <div class="point column third">
+           <!-- <span class="ion-iphone"></span> -->
+           <h5 class="point-title">Add Collaborators</h5>
+           <p class="point-description">Find out more about a premium account.</p>
+      </div>
+  </section>
+<br>
   <h3>Log in</h3>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -36,25 +58,4 @@
   <%= render "devise/shared/links" %>
   </form>
 <br>
-  <section class="hero-content">
-      <h1 class="hero-title">Time to soak it up!</h1>
-  </section>
-<br>
-  <section class="selling-points container clearfix"> <!-- selling points -->
-       <div class="point column third">
-           <!-- <span class="ion-music-note"></span> -->
-           <h5 class="point-title">Create an account</h5>
-           <p class="point-description">Email and password. Duh.</p>
-       </div>
-       <div class="point column third">
-           <!-- <span class="ion-radio-waves"></span> -->
-           <h5 class="point-title">Post your wikis</h5>
-           <p class="point-description">Title and description are all you need.</p>
-       </div>
-       <div class="point column third">
-           <!-- <span class="ion-iphone"></span> -->
-           <h5 class="point-title">Add Collaborators</h5>
-           <p class="point-description">Find out more about a premium account.</p>
-      </div>
-  </section>
 </body>
